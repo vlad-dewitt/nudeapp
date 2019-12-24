@@ -1,0 +1,13 @@
+{
+  "version": 3,
+  "file": "hybrid.js",
+  "sourceRoot": "../../..",
+  "sources": [
+    "coffee/imports/genius/hybrid.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA,IAAA,KAAA,EAAA,MAAA,EAAA;;AAAA,OAAA;EAAS,OAAT;CAAA,MAAA;;AAEA,OAAO,MAAP,MAAA;;AACA,MAAA,CAAA;;AAEA,OAAO,GAAP,MAAA;;AAIA,MAAA,GAAS,QAAA,CAAC,KAAD,EAAQ,KAAR,CAAA;SACP,CAAE,GAAA,KAAF;AADO;;AAKT,MAAA,GAAS,QAAA,CAAC,SAAD,CAAA;SACP,OAAA,CAAQ,MAAR,EAAgB,IAAhB,CAAA,CAAsB,SAAtB;AADO;;AAKT,KAAA,GACE;EAAA,KAAA,EAAO,CAAA,CAAA,GAAA;WACL,KAAK,CAAC,QAAN,CAAA;EADK,CAAP;EAEA,IAAA,EAAM,CAAC,EAAD,EAAK,IAAL,CAAA,GAAA;IACJ,IAAG,IAAA,KAAQ,MAAX;aACE,KAAK,CAAC,QAAN,CACE;QAAA,IAAA,EAAM;MAAN,CADF,EADF;KAAA,MAAA;aAIE,KAAK,CAAC,QAAN,CACE;QAAA,IAAA,EAAM,EAAN;QACA,IAAA,EAAM;MADN,CADF,EAJF;;EADI;AAFN;;AAaF,OAAA;EAAS,MAAT;EAAiB,GAAjB;EAAsB,KAAtB",
+  "sourcesContent": [
+    "import { connect } from 'react-redux'\n\nimport Hunter from './hunter'\nHunter()\n\nimport API from './api/kit'\n\n\n\nStates = (state, props) ->\n  { state... }\n\n\n\nHybrid = (component) ->\n  connect(States, null)(component)\n\n\n\nAmbry =\n  state: =>\n    STORE.getState()\n  call: (id, data) =>\n    if data is undefined\n      STORE.dispatch\n        type: id\n    else\n      STORE.dispatch\n        type: id\n        data: data\n\n\n\nexport { Hybrid, API, Ambry }\n"
+  ]
+}

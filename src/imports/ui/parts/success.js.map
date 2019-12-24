@@ -1,0 +1,13 @@
+{
+  "version": 3,
+  "file": "success.js",
+  "sourceRoot": "../../../..",
+  "sources": [
+    "coffee/imports/ui/parts/success.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA,IAAA,KAAA,EAAA,OAAA,EAAA,MAAA;EAAA;;AAAA,OAAA,YAAU,MAAA,QAAc,cAAd;EACR,WAAa,CAAC,KAAD,CAAA;;QAKb,CAAA,wBAAA,CAAA;QAWA,CAAA,aAAA,CAAA;EAhBa;;EAKb,iBAAmB,CAAA,CAAA;;WACjB,UAAA,CAAW,CAAA,CAAA,GAAA;AACT,UAAA;MAAA,UAAA,GAAa,IAAC,CAAA,KAAK,CAAC,UAAU,CAAC,QAAlB,CAA2B,YAA3B;MACb,IAAG,UAAH;eACE,IAAC,CAAA,KAAK,CAAC,UAAU,CAAC,QAAlB,CAA2B,UAA3B,EADF;OAAA,MAAA;eAGE,IAAC,CAAA,KAAK,CAAC,UAAU,CAAC,QAAlB,CAA2B,MAA3B,EAHF;;IAFS,CAAX,EAME,IANF;EADiB;;EAWnB,MAAQ,CAAA,CAAA;;WACL,CAAA,KAAK,KAAA,CAAM,CAAE,KAAK,CAAC,GAAR,CAAX;MACE,CAAA,MAAM,MAAA,CAAO,CAAE,MAAM,CAAC,GAAG,CAAC,KAAK,CAAC,OAAnB,EAA6B,KAAA,CAAM,CAAC;QAAE,KAAA,EAAO,GAAT;QAAc,MAAA,EAAQ,GAAtB;QAA2B,UAAA,EAAY;MAAvC,CAAD,CAAhD;MACA,CAAA,KAAK,KAAA,CAAM,CAAC,CAAC,UAAU,CAAC,MAAZ,EAAoB,UAAU,CAAC,GAA/B,EAAoC,UAAU,CAAC,IAA/C,EAAqD,KAAK,CAAC,IAA3D,CAAD,CAAX,CAA6E,OAA7E,EAAA,IAAA;IAFF,EAAA,IAAA;EADK;;AAjBA;;AAyBV,KAAA,GAAQ,UAAU,CAAC,MAAX,CACN;EAAA,GAAA,EACE;IAAA,IAAA,EAAM,CAAN;IACA,KAAA,EAAO,MADP;IAEA,eAAA,EAAiB,SAFjB;IAGA,UAAA,EAAY,QAHZ;IAIA,cAAA,EAAgB;EAJhB,CADF;EAOA,IAAA,EACE;IAAA,SAAA,EAAW,EAAX;IACA,QAAA,EAAU,EADV;IAEA,aAAA,EAAe;EAFf;AARF,CADM;;AAeR,OAAA,QAAe,MAAA,CAAO,OAAP",
+  "sourcesContent": [
+    "Success = class extends PureComponent\n  constructor: (props) ->\n    super props\n\n\n\n  componentDidMount: =>\n    setTimeout () =>\n      next_route = @props.navigation.getParam 'next_route'\n      if next_route\n        @props.navigation.navigate next_route\n      else\n        @props.navigation.navigate 'Home'\n    , 2000\n\n\n\n  render: =>\n    <View style={ Shape.Box }>\n      <Image source={ Assets.img.icons.success } style={{ width: 106, height: 106, resizeMode: 'contain' }}/>\n      <Text style={[Typography.Medium, Typography.Big, Typography.Grey, Shape.Text]}>Success</Text>\n    </View>\n\n\n\nShape = StyleSheet.create\n  Box:\n    flex: 1\n    width: '100%'\n    backgroundColor: '#F5F6F9'\n    alignItems: 'center'\n    justifyContent: 'center'\n\n  Text:\n    marginTop: 20\n    fontSize: 28\n    letterSpacing: 1\n\n\n\nexport default Hybrid Success\n"
+  ]
+}

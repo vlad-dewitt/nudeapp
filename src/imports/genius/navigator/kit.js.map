@@ -1,0 +1,13 @@
+{
+  "version": 3,
+  "file": "kit.js",
+  "sourceRoot": "../../../..",
+  "sources": [
+    "coffee/imports/genius/navigator/kit.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA,IAAA;;AAAA,OAAA;EAAS,qBAAT;EAAgC,kBAAhC;CAAA,MAAA;;AACA,OAAO,6BAAP,MAAA;;AAEA,OAAO,aAAP,MAAA;;AACA,OAAO,aAAP,MAAA;;AACA,OAAO,OAAP,MAAA;;AACA,OAAO,YAAP,MAAA;;AAEA,OAAO,OAAP,MAAA;;AAIA,SAAA,GACE;EAAA,aAAA,EAAe,aAAf;EACA,aAAA,EAAe,aADf;EAEA,mBAAA,EACE;IAAA,MAAA,EAAQ,CAAA,CAAA,GAAA;aAAI,CAAA,QAAQ,MAAA,CAAO,OAAf;IAAJ,CAAR;IACA,IAAA,EAAM;EADN,CAHF;EAKA,YAAA,EACE;IAAA,MAAA,EAAQ,YAAR;IACA,IAAA,EAAM;EADN,CANF;EAQA,SAAA,EACE;IAAA,MAAA,EAAQ,CAAA,CAAA,GAAA;aAAI,CAAA,QAAQ,MAAA,CAAO,QAAf;IAAJ,CAAR;IACA,IAAA,EAAM,gBADN;IAEA,iBAAA,EACE;MAAA,eAAA,EAAiB;IAAjB;EAHF,CATF;;EAeA,OAAA,EACE;IAAA,MAAA,EAAQ,OAAR;IACA,IAAA,EAAM;EADN;AAhBF;;AAqBF,OAAA,QAAe,kBAAA,CAAmB,QAAQ,CAAC,MAAT,CAChC;EAAA,GAAA,EAAK,6BAAA,CAA8B,SAA9B,CAAL;EACA,OAAA,EAAS,qBAAA,CAAsB,SAAtB;AADT,CADgC,CAAnB",
+  "sourcesContent": [
+    "import { createSwitchNavigator, createAppContainer } from 'react-navigation'\nimport createAnimatedSwitchNavigator from 'react-navigation-animated-switch'\n\nimport AuthNavigator from './auth_navigator'\nimport HomeNavigator from './home_navigator'\nimport PinCode from '../../ui/parts/pin_code'\nimport PinCodeReset from '../../ui/parts/pin_code_reset'\n\nimport Success from '../../ui/parts/success'\n\n\n\nNavigator =\n  AuthNavigator: AuthNavigator\n  HomeNavigator: HomeNavigator\n  PinCodeVerification:\n    screen: => <PinCode status='check'/>\n    path: 'pincode-check'\n  PinCodeReset:\n    screen: PinCodeReset\n    path: 'pincode-reset'\n  ChangePIN:\n    screen: => <PinCode status='change'/>\n    path: 'pincode-change'\n    navigationOptions:\n      gesturesEnabled: no\n\n  # Should be the last\n  Success:\n    screen: Success\n    path: 'success'\n\n\n\nexport default createAppContainer Platform.select\n  ios: createAnimatedSwitchNavigator Navigator\n  android: createSwitchNavigator Navigator\n"
+  ]
+}

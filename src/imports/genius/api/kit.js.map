@@ -1,0 +1,13 @@
+{
+  "version": 3,
+  "file": "kit.js",
+  "sourceRoot": "../../../..",
+  "sources": [
+    "coffee/imports/genius/api/kit.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA,OAAO,MAAP,MAAA;;AACA,OAAO,MAAP,MAAA;;AAIA,OAAA,QAEE;EAAA,MAAA,EAAQ,MAAR;EACA,MAAA,EAAQ;AADR",
+  "sourcesContent": [
+    "import global from './global'\nimport server from './server'\n\n\n\nexport default\n\n  global: global\n  server: server\n"
+  ]
+}

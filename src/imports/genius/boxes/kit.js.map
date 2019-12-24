@@ -1,0 +1,13 @@
+{
+  "version": 3,
+  "file": "kit.js",
+  "sourceRoot": "../../../..",
+  "sources": [
+    "coffee/imports/genius/boxes/kit.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA,OAAO,GAAP,MAAA;;AAIA,OAAA,QAEE;EAAA,GAAA,EAAK;AAAL",
+  "sourcesContent": [
+    "import app from './app'\n\n\n\nexport default\n\n  app: app\n"
+  ]
+}

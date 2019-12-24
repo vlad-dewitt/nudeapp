@@ -1,0 +1,13 @@
+{
+  "version": 3,
+  "file": "header_custom_back.js",
+  "sourceRoot": "../../../../..",
+  "sources": [
+    "coffee/imports/ui/parts/sub/header_custom_back.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA,IAAA,gBAAA,EAAA,MAAA;EAAA;;AAAA,gBAAA,YAAmB,MAAA,QAAc,cAAd;EACjB,WAAa,CAAC,KAAD,CAAA;;QAKb,CAAA,YAAA,CAAA;QAQA,CAAA,aAAA,CAAA;EAba;;EAKb,KAAO,CAAA,CAAA;;IACL,IAAG,IAAC,CAAA,KAAK,CAAC,MAAP,KAAiB,QAApB;aACE,IAAC,CAAA,KAAK,CAAC,UAAU,CAAC,QAAlB,CAA2B,MAA3B,EADF;KAAA,MAAA;aAGE,IAAC,CAAA,KAAK,CAAC,UAAU,CAAC,MAAlB,CAAA,EAHF;;EADK;;EAQP,MAAQ,CAAA,CAAA;;WACL,CAAA,iBAAiB,OAAA,CAAQ,CAAE,IAAC,CAAA,KAAH,CAAzB;MACE,CAAA,MAAM,MAAA,CAAO,CAAE,MAAM,CAAC,GAAG,CAAC,KAAK,CAAC,UAAnB,EAAgC,KAAA,CAAM,CAAC;QAAE,KAAA,EAAO,EAAT;QAAa,MAAA,EAAQ,EAArB;QAAyB,UAAA,EAAY,EAArC;QAAyC,UAAA,EAAY;MAArD,CAAD,CAAnD;IADF,EAAA,gBAAA;EADK;;AAdS;;AAqBnB,OAAA,QAAe,MAAA,CAAO,cAAA,CAAe,gBAAf,CAAP",
+  "sourcesContent": [
+    "HeaderCustomBack = class extends PureComponent\n  constructor: (props) ->\n    super props\n\n\n\n  press: =>\n    if @props.action is 'goHome'\n      @props.navigation.navigate 'Home'\n    else\n      @props.navigation.goBack()\n\n\n\n  render: =>\n    <TouchableOpacity onPress={ @press }>\n      <Image source={ Assets.img.icons.back_arrow } style={{ width: 18, height: 18, marginLeft: 13, resizeMode: 'contain' }}/>\n    </TouchableOpacity>\n\n\n\nexport default Hybrid withNavigation HeaderCustomBack\n"
+  ]
+}

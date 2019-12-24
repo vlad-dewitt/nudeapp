@@ -1,0 +1,13 @@
+{
+  "version": 3,
+  "file": "redux.js",
+  "sourceRoot": "../../..",
+  "sources": [
+    "coffee/imports/genius/redux.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA,OAAA;EAAS,eAAT;CAAA,MAAA;;AAEA,OAAO,GAAP,MAAA;;AAIA,OAAA,QAAe,CAAA,CAAA,GAAA;SACb,eAAA,CAAgB;IACd,GAAA,EAAK;EADS,CAAhB;AADa",
+  "sourcesContent": [
+    "import { combineReducers } from 'redux'\r\n\r\nimport app from './boxes/app'\r\n\r\n\r\n\r\nexport default =>\r\n  combineReducers {\r\n    app: app\r\n  }\r\n"
+  ]
+}

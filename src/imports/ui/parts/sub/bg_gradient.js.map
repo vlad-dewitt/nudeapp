@@ -1,0 +1,13 @@
+{
+  "version": 3,
+  "file": "bg_gradient.js",
+  "sourceRoot": "../../../../..",
+  "sources": [
+    "coffee/imports/ui/parts/sub/bg_gradient.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA,IAAA,UAAA,EAAA,KAAA,EAAA,MAAA;EAAA;;AAAA,UAAA,YAAa,MAAA,QAAc,cAAd;EACX,WAAa,CAAC,KAAD,CAAA;;QAKb,CAAA,aAAA,CAAA;EALa;;EAKb,MAAQ,CAAA,CAAA;;WACL,CAAA,eAAe,aAAA,CAAc,WAAW,MAAA,CAAO,CAAE,IAAC,CAAA,KAAK,CAAC,MAAT,EAAkB,KAAA,CAAM,CAAK,IAAC,CAAA,KAAK,CAAC,KAAV,GAAqB,CAAC,KAAK,CAAC,UAAP,EAAmB,IAAC,CAAA,KAAK,CAAC,KAA1B,CAArB,GAA2D,KAAK,CAAC,UAAnE,EAAgF,KAAA,CAAM,CAAK,IAAC,CAAA,KAAK,CAAC,KAAV,GAAqB,IAAC,CAAA,KAAK,CAAC,KAA5B,GAAuC,CAAC,CAAD,EAAI,CAAJ,CAAzC,EAAkD,GAAA,CAAI,CAAK,IAAC,CAAA,KAAK,CAAC,GAAV,GAAmB,IAAC,CAAA,KAAK,CAAC,GAA1B,GAAmC,CAAC,CAAD,EAAI,CAAJ,CAArC,CAAnN;MAAgQ,CAE7P,IAAC,CAAA,KAAK,CAAC,QAFsP;IAAhQ,EAAA,cAAA;EADK;;AANG;;AAeb,KAAA,GAAQ,UAAU,CAAC,MAAX,CACN;EAAA,UAAA,EACE;IAAA,KAAA,EAAO,MAAM,CAAC,KAAd;IACA,MAAA,EAAQ,MAAM,CAAC;EADf;AADF,CADM;;AAOR,OAAA,QAAe,MAAA,CAAO,UAAP",
+  "sourcesContent": [
+    "BGGradient = class extends PureComponent\n  constructor: (props) ->\n    super props\n\n\n\n  render: =>\n    <LinearGradient pointerEvents='box-none' colors={ @props.colors } style={ if @props.style then [Shape.BGGradient, @props.style] else Shape.BGGradient } start={ if @props.start then @props.start else [1, 0] } end={ if @props.end then @props.end else [0, 1] }>\n      {\n        @props.children\n      }\n    </LinearGradient>\n\n\n\nShape = StyleSheet.create\n  BGGradient:\n    width: Window.width\n    height: Window.height\n\n\n\nexport default Hybrid BGGradient\n"
+  ]
+}

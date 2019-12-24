@@ -1,0 +1,13 @@
+{
+  "version": 3,
+  "file": "nude_logo.js",
+  "sourceRoot": "../../../../..",
+  "sources": [
+    "coffee/imports/ui/parts/sub/nude_logo.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA,IAAA,QAAA,EAAA,MAAA;EAAA;;AAAA,QAAA,YAAW,MAAA,QAAc,cAAd;EACT,WAAa,CAAC,KAAD,CAAA;;QAKb,CAAA,aAAA,CAAA;EALa;;EAKb,MAAQ,CAAA,CAAA;;WACL,CAAA,MAAM,MAAA,CAAO,CAAE,MAAM,CAAC,GAAG,CAAC,QAAQ,CAAC,SAAtB,EAAkC,KAAA,CAAM,CAAC;QAAE,KAAA,EAAO,MAAT;QAAiB,MAAA,EAAQ,MAAzB;QAAiC,UAAA,EAAY;MAA7C,CAAD,CAArD;EADK;;AANC;;AAWX,OAAA,QAAe,MAAA,CAAO,QAAP",
+  "sourcesContent": [
+    "NudeLogo = class extends PureComponent\n  constructor: (props) ->\n    super props\n\n\n\n  render: =>\n    <Image source={ Assets.img.pictures.nude_logo } style={{ width: '100%', height: '100%', resizeMode: 'contain' }}/>\n\n\n\nexport default Hybrid NudeLogo\n"
+  ]
+}

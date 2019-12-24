@@ -1,0 +1,13 @@
+{
+  "version": 3,
+  "file": "initial_script.js",
+  "sourceRoot": "../..",
+  "sources": [
+    "coffee/lib/initial_script.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA,OAAO,MAAP,MAAA,sBAAA;;;;AAOA,IAAC,CAAA,MAAD,GAAU,IAAI,MAAJ,CAAA;;AAEV,MAAM,CAAC,SAAP,CACE;EAAA,KAAA,EAAO,kBAAP;EACA,MAAA,EAAQ,eADR;EAEA,UAAA,EAAY;AAFZ,CADF",
+  "sourcesContent": [
+    "import Tflite from 'tflite-react-native'\n\n# import { useScreens } from 'react-native-screens'\n# useScreens()\n\n\n\n@TFLite = new Tflite()\n\nTFLite.loadModel\n  model: 'open_nsfw.tflite'\n  labels: 'open_nsfw.txt'\n  numThreads: 1\n"
+  ]
+}

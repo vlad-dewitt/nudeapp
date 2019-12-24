@@ -1,0 +1,13 @@
+{
+  "version": 3,
+  "file": "hunter.js",
+  "sourceRoot": "../../..",
+  "sources": [
+    "coffee/imports/genius/hunter.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA,IAAA;;AAAA,OAAA,QAAe,MAAA,GAAS,QAAA,CAAA,CAAA;SAEtB;AAFsB",
+  "sourcesContent": [
+    "export default Hunter = ->\n\n  no\n"
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "expo": {
+    "name": "Nude App",
+    "slug": "nudeapp",
+    "privacy": "public",
+    "sdkVersion": "34.0.0",
+    "platforms": [
+      "android"
+    ],
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSFaceIDUsageDescription": "Secure login to the application",
+        "NSCameraUsageDescription": "Capture photos and videos",
+        "NSMicrophoneUsageDescription": "Record videos",
+        "NSPhotoLibraryAddUsageDescription": "App requires access to export/restore photos and videos",
+        "NSPhotoLibraryUsageDescription": "App requires access to import photos and videos"
+      },
+      "bundleIdentifier": "com-hexa-nude-sexiest-app-vault",
+      "publishBundlePath": "ios/nude-app/Supporting/shell-app.bundle",
+      "publishManifestPath": "ios/nude-app/Supporting/shell-app-manifest.json"
+    },
+    "android": {
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "INTERNET",
+        "READ_PHONE_STATE",
+        "RECORD_AUDIO",
+        "USE_FINGERPRINT",
+        "WRITE_EXTERNAL_STORAGE"
+      ],
+      "package": "com.hexa.nude",
+      "publishBundlePath": "android/app/src/main/assets/shell-app.bundle",
+      "publishManifestPath": "android/app/src/main/assets/shell-app-manifest.json"
+    },
+    "isDetached": true,
+    "detach": {
+      "iosExpoViewUrl": "https://s3.amazonaws.com/exp-exponent-view-code/ios-v2.12.4-sdk34.0.0-ee3e7450-9ec2-4836-8c8c-335483e62917.tar.gz",
+      "androidExpoViewUrl": "https://s3.amazonaws.com/exp-exponent-view-code/android-v2.12.2-sdk34.0.0-767c7d3b-87b6-4f80-a9af-92ce67e2a49d.tar.gz"
+    },
+    "scheme": "exp5b1bba5c81734aeb884d5697777eb207"
+  }
+}

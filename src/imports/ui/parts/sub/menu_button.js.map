@@ -1,0 +1,13 @@
+{
+  "version": 3,
+  "file": "menu_button.js",
+  "sourceRoot": "../../../../..",
+  "sources": [
+    "coffee/imports/ui/parts/sub/menu_button.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA,IAAA,UAAA,EAAA,MAAA;EAAA;;AAAA,UAAA,YAAa,MAAA,QAAc,cAAd;EACX,WAAa,CAAC,KAAD,CAAA;;QAKb,CAAA,eAAA,CAAA;QAKA,CAAA,aAAA,CAAA;EAVa;;EAKb,QAAU,CAAA,CAAA;;WACR,IAAC,CAAA,KAAK,CAAC,UAAU,CAAC,UAAlB,CAAA;EADQ;;EAKV,MAAQ,CAAA,CAAA;;WACL,CAAA,iBAAiB,KAAA,CAAM,CAAE;QAAA,KAAA,EAAO,EAAP;QAAW,MAAA,EAAQ,EAAnB;QAAuB,UAAA,EAAY,QAAnC;QAA6C,cAAA,EAAgB;MAA7D,CAAF,EAA0E,OAAA,CAAQ,CAAE,IAAC,CAAA,QAAH,CAAzG;MACE,CAAA,MAAM,MAAA,CAAO,CAAE,MAAM,CAAC,GAAG,CAAC,KAAK,CAAC,UAAnB,EAAgC,KAAA,CAAM,CAAE;QAAA,KAAA,EAAO,EAAP;QAAW,MAAA,EAAQ,EAAnB;QAAuB,UAAA,EAAY;MAAnC,CAAF,CAAnD;IADF,EAAA,gBAAA;EADK;;AAXG;;AAkBb,OAAA,QAAe,MAAA,CAAO,cAAA,CAAe,UAAf,CAAP",
+  "sourcesContent": [
+    "MenuButton = class extends PureComponent\n  constructor: (props) ->\n    super props\n\n\n\n  openMenu: =>\n    @props.navigation.openDrawer()\n\n\n\n  render: =>\n    <TouchableOpacity style={ width: 36, height: 36, alignItems: 'center', justifyContent: 'center' } onPress={ @openMenu }>\n      <Image source={ Assets.img.icons.three_dots } style={ width: 24, height: 24, resizeMode: 'contain' }/>\n    </TouchableOpacity>\n\n\n\nexport default Hybrid withNavigation MenuButton\n"
+  ]
+}

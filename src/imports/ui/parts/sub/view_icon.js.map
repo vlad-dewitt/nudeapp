@@ -1,0 +1,13 @@
+{
+  "version": 3,
+  "file": "view_icon.js",
+  "sourceRoot": "../../../../..",
+  "sources": [
+    "coffee/imports/ui/parts/sub/view_icon.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA,IAAA,KAAA,EAAA,QAAA,EAAA,MAAA;EAAA;;AAAA,QAAA,YAAW,MAAA,QAAc,cAAd;EACT,WAAa,CAAC,KAAD,CAAA;;QAKb,CAAA,aAAA,CAAA;EALa;;EAKb,MAAQ,CAAA,CAAA;;WACL,CAAA,KAAK,KAAA,CAAM,CAAC;QAAE,GAAA,KAAK,CAAC,QAAR;QAAqB,OAAA,EAAY,IAAC,CAAA,KAAK,CAAC,OAAV,GAAuB,CAAvB,GAA8B;MAA5D,CAAD,CAAX;MACE,CAAA,MAAM,MAAA,CAAO,CAAE,IAAC,CAAA,KAAK,CAAC,IAAT,EAAgB,KAAA,CAAM,CAAC;QAAE,KAAA,EAAO,MAAT;QAAiB,MAAA,EAAQ,MAAzB;QAAiC,UAAA,EAAY;MAA7C,CAAD,CAAnC;IADF,EAAA,IAAA;EADK;;AANC;;AAaX,KAAA,GAAQ,UAAU,CAAC,MAAX,CACN;EAAA,QAAA,EACE;IAAA,UAAA,EAAY,QAAZ;IACA,cAAA,EAAgB,QADhB;IAEA,KAAA,EAAO,EAFP;IAGA,MAAA,EAAQ;EAHR;AADF,CADM;;AASR,OAAA,QAAe,MAAA,CAAO,QAAP",
+  "sourcesContent": [
+    "ViewIcon = class extends PureComponent\n  constructor: (props) ->\n    super props\n\n\n\n  render: =>\n    <View style={{ Shape.ViewIcon..., opacity: if @props.focused then 1 else .4 }}>\n      <Image source={ @props.icon } style={{ width: '100%', height: '100%', resizeMode: 'contain' }}/>\n    </View>\n\n\n\nShape = StyleSheet.create\n  ViewIcon:\n    alignItems: 'center'\n    justifyContent: 'center'\n    width: 20\n    height: 20\n\n\n\nexport default Hybrid ViewIcon\n"
+  ]
+}

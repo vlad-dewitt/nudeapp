@@ -1,0 +1,13 @@
+{
+  "version": 3,
+  "file": "header_logo.js",
+  "sourceRoot": "../../../../..",
+  "sources": [
+    "coffee/imports/ui/parts/sub/header_logo.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA,IAAA,UAAA,EAAA,KAAA,EAAA,MAAA;EAAA;;AAAA,OAAO,QAAP,MAAA;;AAIA,UAAA,YAAa,MAAA,QAAc,cAAd;EACX,WAAa,CAAC,KAAD,CAAA;;QAKb,CAAA,aAAA,CAAA;EALa;;EAKb,MAAQ,CAAA,CAAA;;WACL,CAAA,KAAK,KAAA,CAAM,CAAE,KAAK,CAAC,GAAR,CAAX;MACE,CAAA,QAAA;IADF,EAAA,IAAA;EADK;;AANG;;AAab,KAAA,GAAQ,UAAU,CAAC,MAAX,CACN;EAAA,GAAA,EACE;IAAA,KAAA,EAAO,GAAP;IACA,MAAA,EAAQ,EADR;IAEA,UAAA,EAAY;EAFZ;AADF,CADM;;AAQR,OAAA,QAAe,MAAA,CAAO,UAAP",
+  "sourcesContent": [
+    "import NudeLogo from './nude_logo'\n\n\n\nHeaderLogo = class extends PureComponent\n  constructor: (props) ->\n    super props\n\n\n\n  render: =>\n    <View style={ Shape.Box }>\n      <NudeLogo/>\n    </View>\n\n\n\nShape = StyleSheet.create\n  Box:\n    width: 106\n    height: 48\n    alignItems: 'center'\n\n\n\nexport default Hybrid HeaderLogo\n"
+  ]
+}

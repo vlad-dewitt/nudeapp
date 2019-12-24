@@ -1,0 +1,13 @@
+{
+  "version": 3,
+  "file": "kit.js",
+  "sourceRoot": "..",
+  "sources": [
+    "coffee/kit.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA,OAAA;;AACA,OAAA;;AAEA,OAAA;EAAS,QAAT;CAAA,MAAA;;AACA,OAAA;EAAS,WAAT;EAAsB,eAAtB;CAAA,MAAA;;AAEA,OAAO,KAAP,MAAA;;AAEA,OAAO,GAAP,MAAA;;AAIA,IAAC,CAAA,KAAD,GAAS,WAAA,CAAY,KAAA,CAAA,CAAZ;;AAIT,OAAA,QAAe,CAAA,CAAA,GAAA;SACZ,CAAA,SAAS,KAAA,CAAM,CAAE,KAAF,CAAf;IACE,CAAA,GAAA;EADF,EAAA,QAAA;AADY",
+  "sourcesContent": [
+    "import './lib/initial_script'\nimport './lib/global_scope'\n\nimport { Provider } from 'react-redux'\nimport { createStore, applyMiddleware } from 'redux'\n\nimport Redux from './imports/genius/redux'\n\nimport App from './imports/kit'\n\n\n\n@STORE = createStore Redux()\n\n\n\nexport default =>\n  <Provider store={ STORE }>\n    <App/>\n  </Provider>\n"
+  ]
+}

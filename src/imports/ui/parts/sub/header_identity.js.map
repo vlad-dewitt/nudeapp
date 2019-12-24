@@ -1,0 +1,13 @@
+{
+  "version": 3,
+  "file": "header_identity.js",
+  "sourceRoot": "../../../../..",
+  "sources": [
+    "coffee/imports/ui/parts/sub/header_identity.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA,IAAA,cAAA,EAAA,MAAA;EAAA;;AAAA,cAAA,YAAiB,MAAA,QAAc,cAAd;EACf,WAAa,CAAC,KAAD,CAAA;;QAQb,CAAA,YAAA,CAAA;QAOA,CAAA,aAAA,CAAA;IAbE,IAAC,CAAA,KAAD,GACE;MAAA,iBAAA,EAAmB,IAAC,CAAA,KAAK,CAAC,GAAG,CAAC,YAAY,CAAC,iBAA3C;MACA,gBAAA,EAAkB,IAAC,CAAA,KAAK,CAAC,GAAG,CAAC,IAAI,CAAC,IAAI,CAAC,QAAQ,CAAC;IADhD;EAHS;;EAQb,KAAO,CAAA,CAAA;;WACL,GAAG,CAAC,MAAM,CAAC,QAAX,CAAoB,CAAC,UAAD,CAAA,GAAA;MAClB,IAAG,UAAH;eACE,IAAC,CAAA,KAAK,CAAC,UAAU,CAAC,QAAlB,CAA2B,MAA3B,EADF;;IADkB,CAApB;EADK;;EAOP,MAAQ,CAAA,CAAA;;IACN,IAAG,IAAC,CAAA,KAAK,CAAC,iBAAP,IAA6B,IAAC,CAAA,KAAK,CAAC,gBAAvC;aACG,CAAA,iBAAiB,OAAA,CAAQ,CAAE,IAAC,CAAA,KAAH,CAAzB;QACE,CAAA,MAAM,MAAA,CAAO,CAAK,IAAC,CAAA,KAAK,CAAC,iBAAP,KAA4B,aAA/B,GAAkD,MAAM,CAAC,GAAG,CAAC,KAAK,CAAC,QAAnE,GAAiF,MAAM,CAAC,GAAG,CAAC,KAAK,CAAC,OAApG,EAA8G,KAAA,CAAM,CAAC;UAAE,KAAA,EAAO,EAAT;UAAa,MAAA,EAAQ,EAArB;UAAyB,UAAA,EAAY;QAArC,CAAD,CAAjI;MADF,EAAA,gBAAA,EADH;KAAA,MAAA;aAKE,KALF;;EADM;;AAhBO;;AA0BjB,OAAA,QAAe,MAAA,CAAO,cAAA,CAAe,cAAf,CAAP",
+  "sourcesContent": [
+    "HeaderIdentity = class extends PureComponent\n  constructor: (props) ->\n    super props\n    @state =\n      identity_hardware: @props.app.initial_data.identity_hardware\n      identity_enabled: @props.app.user.data.settings.touch_id_enabled\n\n\n\n  press: =>\n    API.global.identify (identified) =>\n      if identified\n        @props.navigation.navigate 'Home'\n\n\n\n  render: =>\n    if @state.identity_hardware and @state.identity_enabled\n      <TouchableOpacity onPress={ @press }>\n        <Image source={ if @state.identity_hardware is 'FINGERPRINT' then Assets.img.icons.touch_id else Assets.img.icons.face_id } style={{ width: 36, height: 36, resizeMode: 'contain' }}/>\n      </TouchableOpacity>\n    else\n      null\n\n\n\nexport default Hybrid withNavigation HeaderIdentity\n"
+  ]
+}

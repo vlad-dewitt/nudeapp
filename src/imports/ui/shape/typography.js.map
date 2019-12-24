@@ -1,0 +1,13 @@
+{
+  "version": 3,
+  "file": "typography.js",
+  "sourceRoot": "../../../..",
+  "sources": [
+    "coffee/imports/ui/shape/typography.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA,OAAA;EAAS,UAAT;CAAA,MAAA;;AAIA,OAAA,QAAe,UAAU,CAAC,MAAX,CAEb;EAAA,KAAA,EACE;IAAA,UAAA,EAAY;EAAZ,CADF;EAGA,MAAA,EACE;IAAA,UAAA,EAAY;EAAZ,CAJF;EAMA,QAAA,EACE;IAAA,UAAA,EAAY;EAAZ,CAPF;EASA,IAAA,EACE;IAAA,UAAA,EAAY;EAAZ,CAVF;EAYA,MAAA,EACE;IAAA,QAAA,EAAU,EAAV;IACA,KAAA,EAAO,OADP;IAEA,aAAA,EAAe;EAFf,CAbF;EAiBA,KAAA,EACE;IAAA,QAAA,EAAU,EAAV;IACA,KAAA,EAAO,OADP;IAEA,aAAA,EAAe;EAFf,CAlBF;EAsBA,OAAA,EACE;IAAA,QAAA,EAAU,EAAV;IACA,KAAA,EAAO,OADP;IAEA,aAAA,EAAe;EAFf,CAvBF;EA2BA,MAAA,EACE;IAAA,QAAA,EAAU,EAAV;IACA,KAAA,EAAO,OADP;IAEA,aAAA,EAAe;EAFf,CA5BF;EAgCA,GAAA,EACE;IAAA,QAAA,EAAU,EAAV;IACA,KAAA,EAAO,OADP;IAEA,aAAA,EAAe;EAFf,CAjCF;EAqCA,KAAA,EACE;IAAA,KAAA,EAAO;EAAP,CAtCF;EAwCA,IAAA,EACE;IAAA,KAAA,EAAO;EAAP,CAzCF;EA2CA,QAAA,EACE;IAAA,KAAA,EAAO;EAAP,CA5CF;EA8CA,KAAA,EACE;IAAA,KAAA,EAAO;EAAP;AA/CF,CAFa",
+  "sourcesContent": [
+    "import { StyleSheet } from 'react-native'\n\n\n\nexport default StyleSheet.create\n\n  Light:\n    fontFamily: 'Montserrat-Light'\n\n  Medium:\n    fontFamily: 'Montserrat-Medium'\n\n  SemiBold:\n    fontFamily: 'Montserrat-SemiBold'\n\n  Bold:\n    fontFamily: 'Montserrat-Bold'\n\n  Little:\n    fontSize: 12\n    color: 'white'\n    letterSpacing: 0\n\n  Small:\n    fontSize: 14\n    color: 'white'\n    letterSpacing: .1\n\n  Regular:\n    fontSize: 16\n    color: 'white'\n    letterSpacing: .15\n\n  Bigger:\n    fontSize: 18\n    color: 'white'\n    letterSpacing: .20\n\n  Big:\n    fontSize: 20\n    color: 'white'\n    letterSpacing: .25\n\n  White:\n    color: '#FFFFFF'\n\n  Grey:\n    color: '#B3B5B8'\n\n  DarkGrey:\n    color: '#73787A'\n\n  Black:\n    color: '#3d3d3d'\n"
+  ]
+}
